@@ -1,3 +1,10 @@
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+    <div>
+        <label>
+            <textarea wire:model="body" placeholder="O que tá na tua caixola hoje?"></textarea>
+        </label>
+        @error('body') <span class="text-red-600 font-bold">{{ $message }}</span> @enderror
+    </div>
+
+    <x-primary-button wire:click="tweet">Tweet :3</x-primary-button>
 </div>
